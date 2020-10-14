@@ -1,0 +1,6 @@
+@use './variables' as *;
+
+@mixin H4 {
+  font-size: $H4-text;
+  line-height: $H4-line-height;
+}

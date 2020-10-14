@@ -1,7 +1,7 @@
 @use './partials/variables' as *;
 @use "./partials/variables" as *;
-
-// Issues already - 1) how do I get my fonts to work
+@use './partials/typography' as *;
+@use './partials/mixins' as *;
 
 *,
 *::before,
@@ -18,47 +18,47 @@ body {
   flex-direction: column;
   background-color: $primary-nav;
   height: 5rem;
-}
 
-.header__logo {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
+  &__anchor {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+  }
 
-.header__nav-ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  margin: auto;
-  padding: 0;
-  color: #afafaf;
-}
+  &__logo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 
-li {
-  position: relative;
-}
+  &__nav-ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0;
+    padding: 0;
+    color: $text-label;
+  }
 
-.current__link:after {
-  content: "";
-  display: block;
-  border-bottom: 4px solid white;
-  width: 160px;
-  position: absolute;
-  top: 25px;
-  left: -53px;
-  margin: 0 auto;
-}
+  &__nav-ul li {
+    position: relative;
+    font-family: $font-regular;
+    @include H4;
+    width: 10rem;
+    text-align: center;
+    display: inline-block;
+  }
 
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
+  &__link:after {
+    content: "";
+    display: block;
+    border-bottom: 0.25rem solid white;
+    width: 10rem;
+    position: absolute;
+    top: 1.3125rem;
+  }
 
-.main {
-  background-color: black;
-  margin-top: 0;
-}
-
-h1 {
-  margin: 0;
+  &__link {
+    text-decoration: none;
+    color: #ffffff;
+  }
 }
