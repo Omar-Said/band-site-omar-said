@@ -1,0 +1,64 @@
+@use './partials/variables' as *;
+@use "./partials/variables" as *;
+
+// Issues already - 1) how do I get my fonts to work
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: $primary-nav;
+  height: 5rem;
+}
+
+.header__logo {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.header__nav-ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  padding: 0;
+  color: #afafaf;
+}
+
+li {
+  position: relative;
+}
+
+.current__link:after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid white;
+  width: 160px;
+  position: absolute;
+  top: 25px;
+  left: -53px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.main {
+  background-color: black;
+  margin-top: 0;
+}
+
+h1 {
+  margin: 0;
+}
