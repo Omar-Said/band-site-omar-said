@@ -1,14 +1,14 @@
 @font-face {
   font-family: "AvenirNextLTPro-Bold";
-  src: url("../../assets/Fonts/Linotype - AvenirNextLTPro-Bold.otf") format("woff2");
+  src: url("../assets/Fonts/Linotype - AvenirNextLTPro-Bold.otf") format("opentype");
 }
 @font-face {
   font-family: "AvenirNextLTPro-Demi";
-  src: url("../../assets/Fonts/Linotype - AvenirNextLTPro-Demi.otf") format("woff2");
+  src: url("../assets/Fonts/Linotype - AvenirNextLTPro-Demi.otf") format("opentype");
 }
 @font-face {
   font-family: "AvenirNextLTPro-Regular";
-  src: url("../../assets/Fonts/Linotype - AvenirNextLTPro-Regular.otf") format("woff2");
+  src: url("../assets/Fonts/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
 }
 *,
 *::before,
@@ -54,7 +54,7 @@ body {
 }
 .header__nav-ul li {
   position: relative;
-  font-family: "AvenirNextLTPro-regular";
+  font-family: "AvenirNextLTPro-Regular";
   font-size: 0.8125rem;
   line-height: 1.125rem;
   width: 10rem;
@@ -76,12 +76,9 @@ body {
 
 .hero {
   background-image: url("../assets/Images/hero.jpg");
-  background-color: rgba(50, 50, 50, 0.5);
+  height: 50vw;
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 11.4375rem;
-  width: 100%;
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,21 +89,25 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: rgba(50, 50, 50, 0.5);
 }
 .hero__heading {
   margin: 0;
   color: #ffffff;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-family: "AvenirNextLTPro-Demi";
   margin-left: 1rem;
-  margin-right: 2rem;
   width: 12.5rem;
 }
 
-.section {
+.main {
   margin-left: 1rem;
   margin-right: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,7 +119,7 @@ body {
 .section__header {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "AvenirNextLTPro-bold";
+  font-family: "AvenirNextLTPro-Bold";
   color: #323232;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
@@ -132,8 +133,21 @@ body {
 }
 .section__author {
   font-family: "AvenirNextLTPro-Demi";
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   margin-top: 1rem;
-  font-size: 14px;
-  line-height: 22px;
+  margin-bottom: 1.25rem;
+}
+
+.articles__header {
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-family: "AvenirNextLTPro-Demi";
+}
+.articles__header__article {
+  font-family: "AvenirNextLTPro-Regular";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  color: #323232;
 }
 /*# sourceMappingURL=main.css.map */
