@@ -63,26 +63,68 @@ body {
   }
 }
 
-.main {
+.hero {
   background-image: url("../assets/Images/hero.jpg");
   background-color: rgba($color: #323232, $alpha: 50%);
-  background-size: 100%;
-  background-position: center;
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   height: 11.4375rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  &__heading {
+    margin: 0;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: $font-demi;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    width: 12.5rem;
+  }
 }
 
-.main__header {
-  margin: 0;
-  color: #ffffff;
-  font-size: 24px;
-  line-height: 32px;
-  font-family: $font-demi;
-  margin-left: 16px;
-  margin-right: 16px;
-  width: 200px;
+.section {
+  @include body-margin;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: $font-bold;
+    color: #323232;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__hero {
+    width: 100%;
+  }
+
+  &__desc {
+    font-family: $font-demi;
+    margin-top: 1.5rem;
+  }
+
+  &__author {
+    font-family: $font-demi;
+    @include H2;
+    margin-bottom: 50rem;
+  }
+}
+
+.articles {
+  @include body-margin;
+}
+
+.articles__header {
+  margin-bottom: 24px;
+}
+
+.articles__article {
+  @include body-margin;
 }
