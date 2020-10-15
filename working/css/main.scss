@@ -77,7 +77,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba($color: #323232, $alpha: 50%);
+
+  &:after {
+  }
 
   &__heading {
     margin: 0;
@@ -141,3 +143,15 @@ body {
 }
 
 // Gallery
+
+.gallery {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #fafafa;
+
+  &__heading {
+    font-family: $font-bold;
+    @include H1;
+    padding-top: 2rem;
+  }
+}

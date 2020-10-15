@@ -89,7 +89,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: rgba(50, 50, 50, 0.5);
 }
 .hero__heading {
   margin: 0;
@@ -149,5 +148,17 @@ body {
   font-size: 0.8125rem;
   line-height: 1.125rem;
   color: #323232;
+}
+
+.gallery {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #fafafa;
+}
+.gallery__heading {
+  font-family: "AvenirNextLTPro-Bold";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding-top: 2rem;
 }
 /*# sourceMappingURL=main.css.map */
