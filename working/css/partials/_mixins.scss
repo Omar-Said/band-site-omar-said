@@ -5,6 +5,11 @@
   margin-right: 1rem;
 }
 
+@mixin H1 {
+  font-size: $H1-text;
+  line-height: $H1-line-height;
+}
+
 @mixin H2 {
   font-size: $H2-text;
   line-height: $H2-line-height;
@@ -15,7 +20,12 @@
   line-height: $H4-line-height;
 }
 
-@mixin H1 {
-  font-size: $H1-text;
-  line-height: $H1-line-height;
+@mixin H4-2 {
+  font-size: $H4-text-2;
+  line-height: $H4-line-height-2;
+}
+
+@mixin H5 {
+  font-size: $H5-text;
+  line-height: $H5-line-height;
 }

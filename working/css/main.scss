@@ -78,9 +78,6 @@ body {
   flex-direction: column;
   justify-content: center;
 
-  &:after {
-  }
-
   &__heading {
     margin: 0;
     color: #ffffff;
@@ -153,5 +150,91 @@ body {
     font-family: $font-bold;
     @include H1;
     padding-top: 2rem;
+    margin-bottom: 1.5rem;
   }
+
+  &__images {
+    width: 18rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// Footer
+
+.footer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: $primary-nav;
+
+  &__header {
+    font-family: $font-bold;
+    line-height: 2rem;
+    color: #ffffff;
+    padding-top: 2.5rem;
+  }
+}
+
+.social {
+  margin-bottom: 2rem;
+
+  &__anchor {
+    text-decoration: none;
+  }
+
+  &__icon-mod {
+    margin-left: 1.5rem;
+  }
+}
+
+.contact {
+  color: #ffffff;
+
+  &__name {
+    @include H4-2;
+    margin-bottom: 0;
+    font-family: $font-regular;
+  }
+
+  &__company {
+    @include H4-2;
+    margin-top: 0;
+    font-family: $font-regular;
+  }
+
+  &__address {
+    @include H5;
+    font-family: $font-regular;
+    margin-bottom: 0;
+    color: $text-label;
+  }
+
+  &__address-mod {
+    @include H5;
+    font-family: $font-regular;
+    margin-top: 0;
+    color: $text-label;
+  }
+
+  &__email {
+    @include H5;
+    color: $text-label;
+    font-family: $font-regular;
+  }
+}
+
+.copyright {
+  @include H5;
+  color: $text-label;
+  font-family: $font-regular;
+  margin-bottom: 0;
+  margin-top: 1.5rem;
+}
+
+.copyright-mod {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+  @include H5;
+  color: $text-label;
+  font-family: $font-regular;
 }
