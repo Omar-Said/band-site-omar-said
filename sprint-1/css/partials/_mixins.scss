@@ -1,0 +1,31 @@
+@use './variables' as *;
+
+@mixin body-margin {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@mixin H1M {
+  font-size: $H1M-text;
+  line-height: $H1M-line-height;
+}
+
+@mixin H2M {
+  font-size: $H2M-text;
+  line-height: $H2M-line-height;
+}
+
+@mixin H4M {
+  font-size: $H4M-text;
+  line-height: $H4M-line-height;
+}
+
+@mixin H4M-2 {
+  font-size: $H4M-text-2;
+  line-height: $H4M-line-height-2;
+}
+
+@mixin H5M {
+  font-size: $H5M-text;
+  line-height: $H5M-line-height;
+}

@@ -1,0 +1,32 @@
+@use './typography' as *;
+
+// Colors
+$primary-nav: #323232;
+$text-label: #afafaf;
+
+// Font-size
+
+$H1M-text: 1.5rem;
+$H1M-line-height: 2rem;
+
+$H2M-text: 0.875rem;
+$H2M-line-height: 1.375rem;
+
+$H4M-text: 0.8125rem;
+$H4M-line-height: 1.125rem;
+
+$H4M-text-2: 0.8125rem;
+$H4M-line-height-2: 1.25rem;
+
+$H5M-text: 0.75rem;
+$H5M-line-height: 1.25rem;
+
+// Typography
+
+$font-regular: "AvenirNextLTPro-Regular";
+$font-demi: "AvenirNextLTPro-Demi";
+$font-bold: "AvenirNextLTPro-Bold";
+
+// Breakpoints
+
+$tablet: 768px;

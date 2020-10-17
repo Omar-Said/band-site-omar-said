@@ -18,52 +18,69 @@ body {
 // Header and Nav
 
 .header {
-  display: flex;
-  flex-direction: column;
   background-color: $primary-nav;
   height: 5rem;
 
-  &__anchor {
-    display: inline-block;
-    text-align: center;
-    margin: 0 auto;
+  @media (min-width: $tablet) {
+    display: flex;
+    align-items: center;
   }
 
   &__logo {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding-top: 1rem;
+    display: block;
+    margin: auto;
+    @media (min-width: $tablet) {
+      padding-top: 0;
+      margin-left: 1.75rem;
+    }
+  }
+
+  &__nav {
+    @media (min-width: $tablet) {
+      margin-left: 4rem;
+      margin-top: 2.25rem;
+    }
   }
 
   &__nav-ul {
-    list-style: none;
     display: flex;
     justify-content: space-around;
-    margin-top: 0;
+    list-style-type: none;
     padding: 0;
+    padding-top: 1rem;
+    margin: 0 auto;
+    font-family: $font-regular;
+    @include H4M;
+    @media (min-width: $tablet) {
+      padding-top: 0;
+    }
+  }
+
+  &__nav-ul-li {
+    text-align: center;
+    width: 50vw;
+    @media (min-width: $tablet) {
+      width: 10rem;
+    }
+  }
+
+  & a {
+    text-decoration: none;
     color: $text-label;
   }
+}
 
-  &__nav-ul li {
-    position: relative;
-    font-family: $font-regular;
-    @include H4;
-    width: 10rem;
-    text-align: center;
-    display: inline-block;
+.link {
+  width: 50vw;
+  border-bottom: 4px solid white;
+  padding-bottom: 2rem;
+  @media (min-width: $tablet) {
+    width: 4.5rem;
   }
 
-  &__link:after {
-    content: "";
-    display: block;
-    border-bottom: 0.25rem solid white;
-    width: 10rem;
-    position: absolute;
-    top: 1.3125rem;
-  }
-
-  &__link {
-    text-decoration: none;
-    color: #ffffff;
+  & a {
+    color: white;
   }
 }
 
@@ -77,14 +94,28 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    background-color: rgba($color: #323232, $alpha: 0.5);
+    position: absolute;
+    width: 100%;
+    height: 50vw;
+    z-index: -1;
+  }
 
   &__heading {
     margin: 0;
     color: #ffffff;
-    @include H1;
+    @include H1M;
     font-family: $font-demi;
     margin-left: 1rem;
     width: 12.5rem;
+    @media (min-width: $tablet) {
+      margin-left: 1.5rem;
+    }
   }
 }
 
@@ -119,7 +150,7 @@ body {
 
   &__author {
     font-family: $font-demi;
-    @include H2;
+    @include H2M;
     margin-top: 1rem;
     margin-bottom: 1.25rem;
   }
@@ -134,7 +165,7 @@ body {
 
   &__article {
     font-family: $font-regular;
-    @include H4;
+    @include H4M;
     color: $primary-nav;
   }
 }
@@ -148,7 +179,7 @@ body {
 
   &__heading {
     font-family: $font-bold;
-    @include H1;
+    @include H1M;
     padding-top: 2rem;
     margin-bottom: 1.5rem;
   }
@@ -190,13 +221,13 @@ body {
   color: #ffffff;
 
   &__name {
-    @include H4-2;
+    @include H4M-2;
     margin-bottom: 0;
     font-family: $font-regular;
   }
 
   &__company {
-    @include H4-2;
+    @include H4M-2;
     margin-top: 0;
     font-family: $font-regular;
   }
@@ -209,21 +240,21 @@ body {
   }
 
   &__address-mod {
-    @include H5;
+    @include H5M;
     font-family: $font-regular;
     margin-top: 0;
     color: $text-label;
   }
 
   &__email {
-    @include H5;
+    @include H5M;
     color: $text-label;
     font-family: $font-regular;
   }
 }
 
 .copyright {
-  @include H5;
+  @include H5M;
   color: $text-label;
   font-family: $font-regular;
   margin-bottom: 0;
@@ -234,7 +265,7 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 2rem;
-  @include H5;
+  @include H5M;
   color: $text-label;
   font-family: $font-regular;
 }
