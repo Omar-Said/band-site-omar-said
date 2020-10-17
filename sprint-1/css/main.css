@@ -1,23 +1,20 @@
 @font-face {
   font-family: "AvenirNextLTPro-Bold";
-  src: url("../assets/Fonts/Linotype - AvenirNextLTPro-Bold.otf")
-    format("opentype");
+  src: url("../assets/Fonts/Linotype - AvenirNextLTPro-Bold.otf") format("opentype");
 }
 @font-face {
   font-family: "AvenirNextLTPro-Demi";
-  src: url("../assets/Fonts/Linotype - AvenirNextLTPro-Demi.otf")
-    format("opentype");
+  src: url("../assets/Fonts/Linotype - AvenirNextLTPro-Demi.otf") format("opentype");
 }
 @font-face {
   font-family: "AvenirNextLTPro-Regular";
-  src: url("../assets/Fonts/Linotype - AvenirNextLTPro-Regular.otf")
-    format("opentype");
+  src: url("../assets/Fonts/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
 }
 *,
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -34,8 +31,8 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .header__logo {
@@ -60,7 +57,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   list-style-type: none;
   padding: 0;
   padding-top: 1rem;
@@ -91,12 +88,12 @@ body {
 .link {
   width: 50vw;
   border-bottom: 4px solid white;
-  padding-bottom: 0.4375;
+  padding-bottom: 0.45rem;
 }
 @media (min-width: 768px) {
   .link {
     width: 4.5rem;
-    padding-bottom: 1.375rem;
+    padding-bottom: 1.4rem;
   }
 }
 .link a {
@@ -113,13 +110,18 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   z-index: 1;
+}
+@media (min-width: 768px) {
+  .hero {
+    height: 63vh;
+  }
 }
 .hero::after {
   content: "";
@@ -128,6 +130,11 @@ body {
   width: 100%;
   height: 50vw;
   z-index: -1;
+}
+@media (min-width: 768px) {
+  .hero::after {
+    height: 63vh;
+  }
 }
 .hero__heading {
   margin: 0;
@@ -141,6 +148,9 @@ body {
 @media (min-width: 768px) {
   .hero__heading {
     margin-left: 1.5rem;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    width: 75%;
   }
 }
 
@@ -156,8 +166,8 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .section__header {
   font-size: 1.5rem;
