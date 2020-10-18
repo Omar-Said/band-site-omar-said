@@ -7,14 +7,19 @@
   margin-right: 1rem;
 }
 
-@mixin body-margin-D {
+@mixin body-margin-T {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
 
-@mixin body-margin-g {
+@mixin body-padding {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+@mixin body-margin-D {
+  margin-left: 6.25rem;
+  margin-right: 6.25rem;
 }
 
 // Font

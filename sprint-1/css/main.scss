@@ -34,12 +34,20 @@ body {
       padding-top: 0;
       margin-left: 1.75rem;
     }
+
+    @include desktop {
+      margin-left: 6.25rem;
+    }
   }
 
   &__nav {
     @media (min-width: $tablet) {
       margin-left: 4rem;
       margin-top: 2.25rem;
+    }
+
+    @include desktop {
+      margin-left: 3.5rem;
     }
   }
 
@@ -55,6 +63,10 @@ body {
     @media (min-width: $tablet) {
       padding-top: 0;
     }
+
+    @include desktop {
+      // width: 0;
+    }
   }
 
   &__nav-ul-li {
@@ -63,26 +75,38 @@ body {
     @media (min-width: $tablet) {
       width: 10rem;
     }
+
+    @include desktop {
+      width: 0;
+    }
   }
 
   & a {
     text-decoration: none;
     color: $text-label;
   }
+
+  .link {
+    width: 50vw;
+    border-bottom: 4px solid white;
+    padding-bottom: 0.45rem;
+    @media (min-width: $tablet) {
+      width: 4.5rem;
+      padding-bottom: 1.4rem;
+    }
+
+    @include desktop {
+      width: 5rem;
+    }
+
+    & a {
+      color: white;
+    }
+  }
 }
 
-.link {
-  width: 50vw;
-  border-bottom: 4px solid white;
-  padding-bottom: 0.45rem;
-  @media (min-width: $tablet) {
-    width: 4.5rem;
-    padding-bottom: 1.4rem;
-  }
-
-  & a {
-    color: white;
-  }
+.link-2 {
+  margin-left: 3.5rem;
 }
 
 // Hero Image and Heading
@@ -101,6 +125,10 @@ body {
     height: 52vw;
   }
 
+  @include desktop {
+    height: 52.4vw;
+  }
+
   &::after {
     content: "";
     background-color: rgba($color: #323232, $alpha: 0.5);
@@ -110,6 +138,10 @@ body {
     z-index: -1;
     @media (min-width: $tablet) {
       height: 52vw;
+    }
+
+    @include desktop {
+      height: 52.4vw;
     }
   }
 
@@ -125,6 +157,10 @@ body {
       @include H1D;
       width: 75%;
     }
+    @include desktop {
+      margin-left: 6.25rem;
+      width: 50%;
+    }
   }
 }
 
@@ -134,7 +170,12 @@ body {
   @include body-margin;
   margin-bottom: 2.5rem;
   @media (min-width: $tablet) {
+    @include body-margin-T;
+  }
+
+  @include desktop {
     @include body-margin-D;
+    margin-bottom: 3rem;
   }
 }
 
@@ -151,12 +192,23 @@ body {
     @media (min-width: $tablet) {
       @include H1D-2;
     }
+
+    @include desktop {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
   }
 
   &__hero {
     width: 100%;
     @media (min-width: $tablet) {
       height: 47.2vw;
+    }
+
+    @include desktop {
+      margin: 0 auto;
+      height: 53vh;
+      width: 70vw;
     }
   }
 
@@ -166,6 +218,12 @@ body {
     @media (min-width: $tablet) {
       @include H2D;
       font-family: $font-bold;
+    }
+
+    @include desktop {
+      margin-top: 3rem;
+      padding-right: 5.5rem;
+      padding-left: 5.5rem;
     }
   }
 
@@ -177,6 +235,11 @@ body {
     @media (min-width: $tablet) {
       @include H3D;
     }
+    @include desktop {
+      margin-bottom: 2.25rem;
+      padding-right: 5.5rem;
+      padding-left: 5.5rem;
+    }
   }
 }
 
@@ -185,6 +248,11 @@ body {
 .articles__container {
   @media (min-width: $tablet) {
     display: flex;
+  }
+
+  @include desktop {
+    padding-right: 5.5rem;
+    padding-left: 5.5rem;
   }
 }
 
@@ -196,6 +264,11 @@ body {
     @include H2D;
     font-family: $font-bold;
   }
+  @include desktop {
+    margin-bottom: 2rem;
+    padding-right: 5.5rem;
+    padding-left: 5.5rem;
+  }
 }
 
 .articles__article {
@@ -205,7 +278,11 @@ body {
   @media (min-width: $tablet) {
     @include H4D-2;
     margin: 0;
-    margin-right: 24px;
+    margin-right: 1.5rem;
+  }
+  @include desktop {
+    margin-right: 2.5rem;
+    @include H4D;
   }
 }
 
@@ -220,29 +297,38 @@ body {
 .gallery__heading {
   font-family: $font-bold;
   @include H1M;
-  @include body-margin-g;
+  @include body-padding;
   padding-top: 2rem;
   padding-bottom: 1.5rem;
   margin-top: 0;
   margin-bottom: 0;
   background-color: #fafafa;
+  @include tablet {
+    @include H1D-2;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+  @include desktop {
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+  }
 }
 
 .gallery {
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include body-margin-g;
+  @include body-padding;
   background-color: #fafafa;
   padding-bottom: 2rem;
-
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
   }
-
   @include desktop {
-    max-width: 1280px;
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+    padding-bottom: 2.5rem;
   }
 
   &__images {
@@ -255,17 +341,11 @@ body {
         margin-right: 0;
       }
     }
-    @include desktop {
-      width: calc(25% - (#{$images-margin-tablet} * 3 / 4));
-      max-width: 100%;
-      border: none;
-      &:nth-child(3n) {
-        margin-right: $images-margin-tablet;
-      }
-      &:nth-child(4n) {
-        margin-right: 0;
-      }
-    }
+    // @include desktop {
+    //   width: calc(33.33% - (#{$images-margin-tablet} * 2 / 3));
+    //   max-width: 100%;
+    //   border: none;
+    // }
   }
 }
 
@@ -275,6 +355,11 @@ body {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   background-color: $primary-nav;
+
+  @include desktop {
+    padding-left: 6.25rem;
+    padding-right: 6.25rem;
+  }
 
   &__header {
     font-family: $font-bold;
@@ -298,6 +383,9 @@ body {
     align-items: center;
     padding-top: 3rem;
   }
+  @include desktop {
+    justify-content: flex-start;
+  }
 }
 
 .social {
@@ -311,6 +399,12 @@ body {
     justify-content: flex-start;
   }
 
+  &:nth-child(2) {
+    @include desktop {
+      margin-left: 4rem;
+    }
+  }
+
   &__anchor {
     text-decoration: none;
   }
@@ -320,6 +414,10 @@ body {
     @include tablet {
       margin-left: 1rem;
     }
+    @include desktop {
+      padding: 0;
+      margin-left: 2rem;
+    }
   }
 }
 
@@ -327,6 +425,16 @@ body {
   visibility: hidden;
   @include tablet {
     visibility: visible;
+  }
+  @include desktop {
+    height: 24px;
+    width: 120px;
+  }
+}
+
+.testing {
+  @include desktop {
+    margin-left: auto;
   }
 }
 
@@ -339,6 +447,16 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 2.5rem;
+  }
+  @include desktop {
+    margin-top: 3.5rem;
+    justify-content: flex-start;
+  }
+
+  &__wrapper {
+    @include desktop {
+      margin-right: 4rem;
+    }
   }
 
   &__name {
@@ -357,6 +475,9 @@ body {
     font-family: $font-regular;
     @include tablet {
       @include H3D;
+    }
+    @include desktop {
+      margin-bottom: 1.5rem;
     }
   }
 
@@ -387,12 +508,18 @@ body {
     @include tablet {
       @include H4D;
     }
+    @include desktop {
+      margin-bottom: 2.5rem;
+    }
   }
 }
 
 .mod {
   @include tablet {
     margin-right: 2.5rem;
+  }
+  @include desktop {
+    margin-right: 5rem;
   }
 }
 
