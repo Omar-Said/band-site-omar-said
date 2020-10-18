@@ -89,7 +89,7 @@ body {
 
 .hero {
   background-image: url("../assets/Images/hero.jpg");
-  height: 50vw;
+  height: 57.2vw;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -98,7 +98,7 @@ body {
   position: relative;
   z-index: 1;
   @media (min-width: $tablet) {
-    height: 63vh;
+    height: 52vw;
   }
 
   &::after {
@@ -106,10 +106,10 @@ body {
     background-color: rgba($color: #323232, $alpha: 0.5);
     position: absolute;
     width: 100%;
-    height: 50vw;
+    height: 57.2vw;
     z-index: -1;
     @media (min-width: $tablet) {
-      height: 63vh;
+      height: 52vw;
     }
   }
 
@@ -133,6 +133,9 @@ body {
 .main {
   @include body-margin;
   margin-bottom: 2.5rem;
+  @media (min-width: $tablet) {
+    @include body-margin-D;
+  }
 }
 
 .section {
@@ -140,21 +143,30 @@ body {
   flex-direction: column;
 
   &__header {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    @include H1M;
     font-family: $font-bold;
     color: #323232;
     margin-top: 2rem;
     margin-bottom: 1.5rem;
+    @media (min-width: $tablet) {
+      @include H1D-2;
+    }
   }
 
   &__hero {
     width: 100%;
+    @media (min-width: $tablet) {
+      height: 47.2vw;
+    }
   }
 
   &__desc {
     font-family: $font-demi;
     margin-top: 1.5rem;
+    @media (min-width: $tablet) {
+      @include H2D;
+      font-family: $font-bold;
+    }
   }
 
   &__author {
@@ -162,83 +174,190 @@ body {
     @include H2M;
     margin-top: 1rem;
     margin-bottom: 1.25rem;
+    @media (min-width: $tablet) {
+      @include H3D;
+    }
   }
 }
 
 // Articles section
 
+.articles__container {
+  @media (min-width: $tablet) {
+    display: flex;
+  }
+}
+
 .articles__header {
   margin-top: 1.25rem;
   margin-bottom: 1.5rem;
   font-family: $font-demi;
+  @media (min-width: $tablet) {
+    @include H2D;
+    font-family: $font-bold;
+  }
+}
 
-  &__article {
-    font-family: $font-regular;
-    @include H4M;
-    color: $primary-nav;
+.articles__article {
+  font-family: $font-regular;
+  @include H4M;
+  color: $primary-nav;
+  @media (min-width: $tablet) {
+    @include H4D-2;
+    margin: 0;
+    margin-right: 24px;
+  }
+}
+
+.articles__article:last-of-type {
+  @media (min-width: $tablet) {
+    margin: 0;
   }
 }
 
 // Gallery
 
-.gallery {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.gallery__heading {
+  font-family: $font-bold;
+  @include H1M;
+  @include body-margin-g;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
   background-color: #fafafa;
+}
 
-  &__heading {
-    font-family: $font-bold;
-    @include H1M;
-    padding-top: 2rem;
-    margin-bottom: 1.5rem;
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include body-margin-g;
+  background-color: #fafafa;
+  padding-bottom: 2rem;
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include desktop {
+    max-width: 1280px;
   }
 
   &__images {
-    width: 18rem;
+    width: 100%;
     margin-bottom: 1rem;
+    @include tablet {
+      width: calc(33.33% - (#{$images-margin-tablet} * 2 / 3));
+      margin: 0 $images-margin-tablet $images-margin-tablet 0;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+    @include desktop {
+      width: calc(25% - (#{$images-margin-tablet} * 3 / 4));
+      max-width: 100%;
+      border: none;
+      &:nth-child(3n) {
+        margin-right: $images-margin-tablet;
+      }
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
   }
 }
 
 // Footer
 
 .footer {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   background-color: $primary-nav;
 
   &__header {
     font-family: $font-bold;
-    line-height: 2rem;
+    @include H1D-2;
     color: #ffffff;
     padding-top: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    @include tablet {
+      visibility: visible;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.footer__wrapper {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
   }
 }
 
 .social {
-  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+  margin-left: 0.25rem;
+  @include tablet {
+    margin: 0;
+    margin-right: 9rem;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
 
   &__anchor {
     text-decoration: none;
   }
 
   &__icon-mod {
-    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+    @include tablet {
+      margin-left: 1rem;
+    }
   }
 }
 
+.hidden {
+  visibility: hidden;
+  @include tablet {
+    visibility: visible;
+  }
+}
+
+// Footer Social
+
 .contact {
   color: #ffffff;
+  margin-top: 0;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+  }
 
   &__name {
     @include H4M-2;
     margin-bottom: 0;
+    margin-top: 0;
     font-family: $font-regular;
+    @include tablet {
+      @include H3D;
+    }
   }
 
   &__company {
     @include H4M-2;
     margin-top: 0;
     font-family: $font-regular;
+    @include tablet {
+      @include H3D;
+    }
   }
 
   &__address {
@@ -246,6 +365,9 @@ body {
     font-family: $font-regular;
     margin-bottom: 0;
     color: $text-label;
+    @include tablet {
+      @include H4D;
+    }
   }
 
   &__address-mod {
@@ -253,12 +375,30 @@ body {
     font-family: $font-regular;
     margin-top: 0;
     color: $text-label;
+    @include tablet {
+      @include H4D;
+    }
   }
 
   &__email {
     @include H5M;
     color: $text-label;
     font-family: $font-regular;
+    @include tablet {
+      @include H4D;
+    }
+  }
+}
+
+.mod {
+  @include tablet {
+    margin-right: 2.5rem;
+  }
+}
+
+.copyright {
+  @include tablet {
+    display: flex;
   }
 }
 
@@ -268,6 +408,10 @@ body {
   font-family: $font-regular;
   margin-bottom: 0;
   margin-top: 1.5rem;
+  @include tablet {
+    margin: 0;
+    @include H4D;
+  }
 }
 
 .copyright-mod {
@@ -277,4 +421,8 @@ body {
   @include H5M;
   color: $text-label;
   font-family: $font-regular;
+  @include tablet {
+    margin-left: 0.2rem;
+    @include H4D;
+  }
 }

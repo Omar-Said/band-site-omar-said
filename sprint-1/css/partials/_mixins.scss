@@ -7,6 +7,16 @@
   margin-right: 1rem;
 }
 
+@mixin body-margin-D {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+@mixin body-margin-g {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 // Font
 
 // Mobile
@@ -70,4 +80,18 @@
 @mixin H5D {
   font-size: $H5D-text;
   line-height: $H5D-line-height;
+}
+
+// Breakpoints
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
 }
