@@ -1,8 +1,9 @@
 @use './typography' as *;
 
 // Colors
-$primary-nav: #323232;
+$primary: #323232;
 $text-label: #afafaf;
+$BG-fill: #fafafa;
 
 // Font-size
 
@@ -23,7 +24,6 @@ $H5M-text: 0.75rem;
 $H5M-line-height: 1.25rem;
 
 // Desktop + Tablet
-
 $H1D-text: 3.75rem;
 $H1D-line-height: 4.25rem;
 

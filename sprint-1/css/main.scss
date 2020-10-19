@@ -13,15 +13,16 @@
 
 body {
   margin: 0 auto;
+  color: $primary;
 }
 
 // Header and Nav
 
 .header {
-  background-color: $primary-nav;
+  background-color: $primary;
   height: 5rem;
 
-  @media (min-width: $tablet) {
+  @include tablet {
     display: flex;
     align-items: center;
   }
@@ -30,7 +31,8 @@ body {
     padding-top: 1rem;
     display: block;
     margin: auto;
-    @media (min-width: $tablet) {
+
+    @include tablet {
       padding-top: 0;
       margin-left: 1.75rem;
     }
@@ -41,7 +43,7 @@ body {
   }
 
   &__nav {
-    @media (min-width: $tablet) {
+    @include tablet {
       margin-left: 4rem;
       margin-top: 2.25rem;
     }
@@ -60,19 +62,17 @@ body {
     margin: 0 auto;
     font-family: $font-regular;
     @include H4M;
-    @media (min-width: $tablet) {
-      padding-top: 0;
-    }
 
-    @include desktop {
-      // width: 0;
+    @include tablet {
+      padding-top: 0;
     }
   }
 
   &__nav-ul-li {
     text-align: center;
     width: 50vw;
-    @media (min-width: $tablet) {
+
+    @include tablet {
       width: 10rem;
     }
 
@@ -80,7 +80,6 @@ body {
       width: 0;
     }
   }
-
   & a {
     text-decoration: none;
     color: $text-label;
@@ -88,9 +87,10 @@ body {
 
   .link {
     width: 50vw;
-    border-bottom: 4px solid white;
+    border-bottom: 4px solid #ffffff;
     padding-bottom: 0.45rem;
-    @media (min-width: $tablet) {
+
+    @include tablet {
       width: 4.5rem;
       padding-bottom: 1.4rem;
     }
@@ -100,7 +100,7 @@ body {
     }
 
     & a {
-      color: white;
+      color: #ffffff;
     }
   }
 }
@@ -121,7 +121,8 @@ body {
   justify-content: center;
   position: relative;
   z-index: 1;
-  @media (min-width: $tablet) {
+
+  @include tablet {
     height: 52vw;
   }
 
@@ -131,12 +132,13 @@ body {
 
   &::after {
     content: "";
-    background-color: rgba($color: #323232, $alpha: 0.5);
+    background-color: rgba($color: $primary, $alpha: 0.5);
     position: absolute;
     width: 100%;
     height: 57.2vw;
     z-index: -1;
-    @media (min-width: $tablet) {
+
+    @include tablet {
       height: 52vw;
     }
 
@@ -146,17 +148,19 @@ body {
   }
 
   &__heading {
+    @include H1M;
     margin: 0;
     color: #ffffff;
-    @include H1M;
     font-family: $font-demi;
     margin-left: 1rem;
     width: 12.5rem;
-    @media (min-width: $tablet) {
-      margin-left: 1.5rem;
+
+    @include tablet {
       @include H1D;
+      margin-left: 1.5rem;
       width: 75%;
     }
+
     @include desktop {
       margin-left: 6.25rem;
       width: 50%;
@@ -169,7 +173,8 @@ body {
 .main {
   @include body-margin;
   margin-bottom: 2.5rem;
-  @media (min-width: $tablet) {
+
+  @include tablet {
     @include body-margin-T;
   }
 
@@ -186,10 +191,11 @@ body {
   &__header {
     @include H1M;
     font-family: $font-bold;
-    color: #323232;
+    color: $primary;
     margin-top: 2rem;
     margin-bottom: 1.5rem;
-    @media (min-width: $tablet) {
+
+    @include tablet {
       @include H1D-2;
     }
 
@@ -201,7 +207,8 @@ body {
 
   &__hero {
     width: 100%;
-    @media (min-width: $tablet) {
+
+    @include tablet {
       height: 47.2vw;
     }
 
@@ -215,7 +222,8 @@ body {
   &__desc {
     font-family: $font-demi;
     margin-top: 1.5rem;
-    @media (min-width: $tablet) {
+
+    @include tablet {
       @include H2D;
       font-family: $font-bold;
     }
@@ -232,9 +240,11 @@ body {
     @include H2M;
     margin-top: 1rem;
     margin-bottom: 1.25rem;
-    @media (min-width: $tablet) {
+
+    @include tablet {
       @include H3D;
     }
+
     @include desktop {
       margin-bottom: 2.25rem;
       padding-right: 5.5rem;
@@ -246,7 +256,7 @@ body {
 // Articles section
 
 .articles__container {
-  @media (min-width: $tablet) {
+  @include tablet {
     display: flex;
   }
 
@@ -260,10 +270,12 @@ body {
   margin-top: 1.25rem;
   margin-bottom: 1.5rem;
   font-family: $font-demi;
-  @media (min-width: $tablet) {
+
+  @include tablet {
     @include H2D;
     font-family: $font-bold;
   }
+
   @include desktop {
     margin-bottom: 2rem;
     padding-right: 5.5rem;
@@ -274,12 +286,14 @@ body {
 .articles__article {
   font-family: $font-regular;
   @include H4M;
-  color: $primary-nav;
-  @media (min-width: $tablet) {
+  color: $primary;
+
+  @include tablet {
     @include H4D-2;
     margin: 0;
     margin-right: 1.5rem;
   }
+
   @include desktop {
     margin-right: 2.5rem;
     @include H4D;
@@ -287,7 +301,8 @@ body {
 }
 
 .articles__article:last-of-type {
-  @media (min-width: $tablet) {
+  @include tablet {
+    @include H4D-2;
     margin: 0;
   }
 }
@@ -302,15 +317,16 @@ body {
   padding-bottom: 1.5rem;
   margin-top: 0;
   margin-bottom: 0;
-  background-color: #fafafa;
+  background-color: $BG-fill;
+
   @include tablet {
     @include H1D-2;
+  }
+
+  @include desktop {
+    @include body-padding-D;
     padding-top: 3rem;
     padding-bottom: 4rem;
-  }
-  @include desktop {
-    padding-left: 6.25rem;
-    padding-right: 6.25rem;
   }
 }
 
@@ -319,21 +335,23 @@ body {
   flex-direction: column;
   align-items: center;
   @include body-padding;
-  background-color: #fafafa;
+  background-color: $BG-fill;
   padding-bottom: 2rem;
+
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
   }
+
   @include desktop {
-    padding-left: 6.25rem;
-    padding-right: 6.25rem;
+    @include body-padding-D;
     padding-bottom: 2.5rem;
   }
 
   &__images {
     width: 100%;
     margin-bottom: 1rem;
+
     @include tablet {
       width: calc(33.33% - (#{$images-margin-tablet} * 2 / 3));
       margin: 0 $images-margin-tablet $images-margin-tablet 0;
@@ -341,11 +359,6 @@ body {
         margin-right: 0;
       }
     }
-    // @include desktop {
-    //   width: calc(33.33% - (#{$images-margin-tablet} * 2 / 3));
-    //   max-width: 100%;
-    //   border: none;
-    // }
   }
 }
 
@@ -354,11 +367,10 @@ body {
 .footer {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  background-color: $primary-nav;
+  background-color: $primary;
 
   @include desktop {
-    padding-left: 6.25rem;
-    padding-right: 6.25rem;
+    @include body-padding-D;
   }
 
   &__header {
@@ -368,6 +380,7 @@ body {
     padding-top: 2.5rem;
     margin-top: 0;
     margin-bottom: 0;
+
     @include tablet {
       visibility: visible;
       margin: 0;
@@ -383,6 +396,7 @@ body {
     align-items: center;
     padding-top: 3rem;
   }
+
   @include desktop {
     justify-content: flex-start;
   }
@@ -391,6 +405,7 @@ body {
 .social {
   margin-top: 1.5rem;
   margin-left: 0.25rem;
+
   @include tablet {
     margin: 0;
     margin-right: 9rem;
@@ -411,9 +426,11 @@ body {
 
   &__icon-mod {
     padding-left: 1.5rem;
+
     @include tablet {
       margin-left: 1rem;
     }
+
     @include desktop {
       padding: 0;
       margin-left: 2rem;
@@ -423,16 +440,18 @@ body {
 
 .hidden {
   visibility: hidden;
+
   @include tablet {
     visibility: visible;
   }
+
   @include desktop {
-    height: 24px;
-    width: 120px;
+    height: 1.5rem;
+    width: 7.5rem;
   }
 }
 
-.testing {
+.logo-anchor {
   @include desktop {
     margin-left: auto;
   }
@@ -443,11 +462,13 @@ body {
 .contact {
   color: #ffffff;
   margin-top: 0;
+
   @include tablet {
     display: flex;
     justify-content: space-between;
     margin-top: 2.5rem;
   }
+
   @include desktop {
     margin-top: 3.5rem;
     justify-content: flex-start;
@@ -464,6 +485,7 @@ body {
     margin-bottom: 0;
     margin-top: 0;
     font-family: $font-regular;
+
     @include tablet {
       @include H3D;
     }
@@ -473,9 +495,11 @@ body {
     @include H4M-2;
     margin-top: 0;
     font-family: $font-regular;
+
     @include tablet {
       @include H3D;
     }
+
     @include desktop {
       margin-bottom: 1.5rem;
     }
@@ -486,6 +510,7 @@ body {
     font-family: $font-regular;
     margin-bottom: 0;
     color: $text-label;
+
     @include tablet {
       @include H4D;
     }
@@ -496,6 +521,7 @@ body {
     font-family: $font-regular;
     margin-top: 0;
     color: $text-label;
+
     @include tablet {
       @include H4D;
     }
@@ -505,9 +531,11 @@ body {
     @include H5M;
     color: $text-label;
     font-family: $font-regular;
+
     @include tablet {
       @include H4D;
     }
+
     @include desktop {
       margin-bottom: 2.5rem;
     }
@@ -535,6 +563,7 @@ body {
   font-family: $font-regular;
   margin-bottom: 0;
   margin-top: 1.5rem;
+
   @include tablet {
     margin: 0;
     @include H4D;
@@ -548,6 +577,7 @@ body {
   @include H5M;
   color: $text-label;
   font-family: $font-regular;
+
   @include tablet {
     margin-left: 0.2rem;
     @include H4D;

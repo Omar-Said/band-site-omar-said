@@ -19,6 +19,7 @@
 
 body {
   margin: 0 auto;
+  color: #323232;
 }
 
 .header {
@@ -101,7 +102,7 @@ body {
 }
 .header .link {
   width: 50vw;
-  border-bottom: 4px solid white;
+  border-bottom: 4px solid #ffffff;
   padding-bottom: 0.45rem;
 }
 @media (min-width: 720px) {
@@ -116,7 +117,7 @@ body {
   }
 }
 .header .link a {
-  color: white;
+  color: #ffffff;
 }
 
 .link-2 {
@@ -170,19 +171,19 @@ body {
   }
 }
 .hero__heading {
-  margin: 0;
-  color: #ffffff;
   font-size: 1.5rem;
   line-height: 2rem;
+  margin: 0;
+  color: #ffffff;
   font-family: "AvenirNextLTPro-Demi";
   margin-left: 1rem;
   width: 12.5rem;
 }
 @media (min-width: 720px) {
   .hero__heading {
-    margin-left: 1.5rem;
     font-size: 3.75rem;
     line-height: 4.25rem;
+    margin-left: 1.5rem;
     width: 75%;
   }
 }
@@ -353,6 +354,8 @@ body {
 
 @media (min-width: 720px) {
   .articles__article:last-of-type {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     margin: 0;
   }
 }
@@ -361,8 +364,8 @@ body {
   font-family: "AvenirNextLTPro-Bold";
   font-size: 1.5rem;
   line-height: 2rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: 2rem;
   padding-bottom: 1.5rem;
   margin-top: 0;
@@ -373,14 +376,14 @@ body {
   .gallery__heading {
     font-size: 2.25rem;
     line-height: 2.75rem;
-    padding-top: 3rem;
-    padding-bottom: 4rem;
   }
 }
 @media (min-width: 1280px) {
   .gallery__heading {
     padding-left: 6.25rem;
     padding-right: 6.25rem;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
   }
 }
 
@@ -395,8 +398,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   background-color: #fafafa;
   padding-bottom: 2rem;
 }
@@ -531,13 +534,13 @@ body {
 }
 @media (min-width: 1280px) {
   .hidden {
-    height: 24px;
-    width: 120px;
+    height: 1.5rem;
+    width: 7.5rem;
   }
 }
 
 @media (min-width: 1280px) {
-  .testing {
+  .logo-anchor {
     margin-left: auto;
   }
 }
