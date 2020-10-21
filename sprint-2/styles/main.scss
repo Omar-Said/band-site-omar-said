@@ -1,0 +1,740 @@
+// Global
+
+@use './partials/variables' as *;
+@use './partials/variables' as *;
+@use './partials/typography' as *;
+@use './partials/mixins' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  color: $primary;
+}
+
+// Header and Nav
+
+.header {
+  background-color: $primary;
+  height: 5rem;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    padding-top: 1rem;
+    display: block;
+    margin: auto;
+
+    @include tablet {
+      padding-top: 0;
+      margin-left: 1.75rem;
+    }
+
+    @include desktop {
+      margin-left: 6.25rem;
+    }
+  }
+
+  &__nav {
+    @include tablet {
+      margin-left: 4rem;
+      margin-top: 2.25rem;
+    }
+
+    @include desktop {
+      margin-left: 3.5rem;
+    }
+  }
+
+  &__nav-ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    padding-top: 1rem;
+    margin: 0 auto;
+    font-family: $font-regular;
+    @include H4M;
+
+    @include tablet {
+      padding-top: 0;
+    }
+  }
+
+  &__nav-ul-li {
+    text-align: center;
+    width: 50vw;
+
+    @include tablet {
+      width: 10rem;
+    }
+
+    @include desktop {
+      width: 0;
+    }
+  }
+  & a {
+    text-decoration: none;
+    color: $text-label;
+  }
+
+  .link {
+    width: 50vw;
+    border-bottom: 4px solid #ffffff;
+    padding-bottom: 0.45rem;
+
+    @include tablet {
+      width: 4.5rem;
+      padding-bottom: 1.4rem;
+    }
+
+    @include desktop {
+      width: 5rem;
+    }
+
+    & a {
+      color: #ffffff;
+    }
+  }
+}
+
+.link-2 {
+  margin-left: 3.5rem;
+}
+
+// Hero Image and Heading
+
+.hero {
+  background-image: url("../assets/Images/hero.jpg");
+  height: 57.2vw;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+
+  @include tablet {
+    height: 52vw;
+  }
+
+  @include desktop {
+    height: 52.4vw;
+  }
+
+  &::after {
+    content: "";
+    background-color: rgba($color: $primary, $alpha: 0.5);
+    position: absolute;
+    width: 100%;
+    height: 57.2vw;
+    z-index: -1;
+
+    @include tablet {
+      height: 52vw;
+    }
+
+    @include desktop {
+      height: 52.4vw;
+    }
+  }
+
+  &__heading {
+    @include H1M;
+    margin: 0;
+    color: #ffffff;
+    font-family: $font-demi;
+    margin-left: 1rem;
+    width: 12.5rem;
+
+    @include tablet {
+      @include H1D;
+      margin-left: 1.5rem;
+      width: 75%;
+    }
+
+    @include desktop {
+      margin-left: 6.25rem;
+      width: 50%;
+    }
+  }
+}
+
+// Main Quote and Article section
+
+.main {
+  @include body-margin;
+  margin-bottom: 2.5rem;
+
+  @include tablet {
+    @include body-margin-T;
+  }
+
+  @include desktop {
+    @include body-margin-D;
+    margin-bottom: 3rem;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    @include H1M;
+    font-family: $font-bold;
+    color: $primary;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+
+    @include tablet {
+      @include H1D-2;
+    }
+
+    @include desktop {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__hero {
+    width: 100%;
+
+    @include tablet {
+      height: 47.2vw;
+    }
+
+    @include desktop {
+      margin: 0 auto;
+      height: 53vh;
+      width: 70vw;
+    }
+  }
+
+  &__desc {
+    font-family: $font-demi;
+    margin-top: 1.5rem;
+
+    @include tablet {
+      @include H2D;
+      font-family: $font-bold;
+    }
+
+    @include desktop {
+      margin-top: 3rem;
+      padding-right: 5.5rem;
+      padding-left: 5.5rem;
+    }
+  }
+
+  &__author {
+    font-family: $font-demi;
+    @include H2M;
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
+
+    @include tablet {
+      @include H3D;
+    }
+
+    @include desktop {
+      margin-bottom: 2.25rem;
+      padding-right: 5.5rem;
+      padding-left: 5.5rem;
+    }
+  }
+}
+
+// Articles section
+
+.articles__container {
+  @include tablet {
+    display: flex;
+  }
+
+  @include desktop {
+    padding-right: 5.5rem;
+    padding-left: 5.5rem;
+  }
+}
+
+.articles__header {
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-family: $font-demi;
+
+  @include tablet {
+    @include H2D;
+    font-family: $font-bold;
+  }
+
+  @include desktop {
+    margin-bottom: 2rem;
+    padding-right: 5.5rem;
+    padding-left: 5.5rem;
+  }
+}
+
+.articles__article {
+  font-family: $font-regular;
+  @include H4M;
+  color: $primary;
+
+  @include tablet {
+    @include H4D-2;
+    margin: 0;
+    margin-right: 1.5rem;
+  }
+
+  @include desktop {
+    margin-right: 2.5rem;
+    @include H4D;
+  }
+}
+
+.articles__article:last-of-type {
+  @include tablet {
+    @include H4D-2;
+    margin: 0;
+  }
+}
+
+// Gallery
+
+.gallery__heading {
+  font-family: $font-bold;
+  @include H1M;
+  @include body-padding;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: $BG-fill;
+
+  @include tablet {
+    @include H1D-2;
+  }
+
+  @include desktop {
+    @include body-padding-D;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include body-padding;
+  background-color: $BG-fill;
+  padding-bottom: 2rem;
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @include desktop {
+    @include body-padding-D;
+    padding-bottom: 1rem;
+  }
+
+  &__images {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      width: calc(33.33% - (#{$images-margin-tablet} * 2 / 3));
+      margin: 0 $images-margin-tablet $images-margin-tablet 0;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+//  Comment Section
+
+.comment {
+  @include body-margin;
+  @include tablet {
+    @include body-margin-T;
+  }
+
+  @include desktop {
+    margin: 0;
+  }
+
+  &__header {
+    font-family: $font-bold;
+    @include H1M;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+
+    @include tablet {
+      @include H1D-2;
+    }
+
+    @include desktop {
+      @include H1D-2;
+      @include body-padding-D;
+      margin-top: 3rem;
+      margin-bottom: 3.5rem;
+    }
+  }
+}
+
+.comment__container {
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment__img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  margin-top: 1.2rem;
+
+  @include desktop {
+    margin-right: 1.25rem;
+    height: 48px;
+    width: 48px;
+    margin-top: 1.7rem;
+  }
+}
+
+.comment__name {
+  @include H5M;
+  font-family: $font-regular;
+  color: $text-label;
+  font-weight: bold;
+
+  @include desktop {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.comment__comment {
+  @include H5M;
+  font-family: $font-regular;
+  color: $text-label;
+  font-weight: bold;
+  margin-top: 1rem;
+
+  @include desktop {
+    margin-top: 1.5rem;
+  }
+}
+
+#comment__name {
+  width: 224px;
+  height: 50px;
+  padding-left: 0.75rem;
+  border: 1px solid #e1e1e1;
+  box-shadow: 0px 40px 32px -4px rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  font-family: $font-regular;
+  @include H5M;
+  background-color: $BG-fill;
+
+  @include tablet {
+    width: 460px;
+  }
+
+  @include desktop {
+    height: 3rem;
+    padding-left: 1rem;
+  }
+}
+
+#comment__comment {
+  width: 224px;
+  height: 100px;
+  border: 1px solid #e1e1e1;
+  box-shadow: 0px 40px 32px -4px rgba(0, 0, 0, 0);
+  border-radius: 2px;
+  font-family: $font-regular;
+  @include H5M;
+  padding-left: 0.75rem;
+  padding-bottom: 3.8rem;
+  background-color: $BG-fill;
+
+  &:active {
+    border-color: black;
+  }
+
+  @include tablet {
+    width: 460px;
+  }
+
+  @include desktop {
+    padding-left: 1rem;
+    height: 96px;
+  }
+}
+
+.comment__button {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 224px;
+  height: 50px;
+  background-color: $primary;
+  color: #ffffff;
+  font-family: $font-regular;
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  @include H4M;
+
+  &:hover {
+    background-color: black;
+  }
+
+  @include tablet {
+    margin-left: auto;
+    width: 160px;
+  }
+
+  @include desktop {
+    width: 160px;
+    height: 48px;
+    margin-top: 1.5rem;
+  }
+}
+
+// Footer
+
+.footer {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: $primary;
+
+  @include desktop {
+    @include body-padding-D;
+  }
+
+  &__header {
+    font-family: $font-bold;
+    @include H1D-2;
+    color: #ffffff;
+    padding-top: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @include tablet {
+      visibility: visible;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.footer__wrapper {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3rem;
+  }
+
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
+
+.social {
+  margin-top: 1.5rem;
+  margin-left: 0.25rem;
+
+  @include tablet {
+    margin: 0;
+    margin-right: 9rem;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &:nth-child(2) {
+    @include desktop {
+      margin-left: 4rem;
+    }
+  }
+
+  &__anchor {
+    text-decoration: none;
+  }
+
+  &__icon-mod {
+    padding-left: 1.5rem;
+
+    @include tablet {
+      margin-left: 1rem;
+    }
+
+    @include desktop {
+      padding: 0;
+      margin-left: 2rem;
+    }
+  }
+}
+
+.hidden {
+  visibility: hidden;
+
+  @include tablet {
+    visibility: visible;
+  }
+
+  @include desktop {
+    height: 1.5rem;
+    width: 7.5rem;
+  }
+}
+
+.logo-anchor {
+  @include desktop {
+    margin-left: auto;
+  }
+}
+
+// Footer Social
+
+.contact {
+  color: #ffffff;
+  margin-top: 0;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+  }
+
+  @include desktop {
+    margin-top: 3.5rem;
+    justify-content: flex-start;
+  }
+
+  &__wrapper {
+    @include desktop {
+      margin-right: 4rem;
+    }
+  }
+
+  &__name {
+    @include H4M-2;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: $font-regular;
+
+    @include tablet {
+      @include H3D;
+    }
+  }
+
+  &__company {
+    @include H4M-2;
+    margin-top: 0;
+    font-family: $font-regular;
+
+    @include tablet {
+      @include H3D;
+    }
+
+    @include desktop {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__address {
+    @include H5M;
+    font-family: $font-regular;
+    margin-bottom: 0;
+    color: $text-label;
+
+    @include tablet {
+      @include H4D;
+    }
+  }
+
+  &__address-mod {
+    @include H5M;
+    font-family: $font-regular;
+    margin-top: 0;
+    color: $text-label;
+
+    @include tablet {
+      @include H4D;
+    }
+  }
+
+  &__email {
+    @include H5M;
+    color: $text-label;
+    font-family: $font-regular;
+
+    @include tablet {
+      @include H4D;
+    }
+
+    @include desktop {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.mod {
+  @include tablet {
+    margin-right: 2.5rem;
+  }
+  @include desktop {
+    margin-right: 5rem;
+  }
+}
+
+.copyright {
+  @include tablet {
+    display: flex;
+  }
+}
+
+.copyright {
+  @include H5M;
+  color: $text-label;
+  font-family: $font-regular;
+  margin-bottom: 0;
+  margin-top: 1.5rem;
+
+  @include tablet {
+    margin: 0;
+    @include H4D;
+  }
+}
+
+.copyright-mod {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+  @include H5M;
+  color: $text-label;
+  font-family: $font-regular;
+
+  @include tablet {
+    margin-left: 0.2rem;
+    @include H4D;
+  }
+}

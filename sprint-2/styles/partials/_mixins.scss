@@ -1,0 +1,107 @@
+@use './variables' as *;
+
+// Body
+
+@mixin body-margin {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@mixin body-margin-T {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+@mixin body-padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@mixin body-margin-D {
+  margin-left: 6.25rem;
+  margin-right: 6.25rem;
+}
+
+@mixin body-padding-D {
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+}
+
+// Font
+
+// Mobile
+@mixin H1M {
+  font-size: $H1M-text;
+  line-height: $H1M-line-height;
+}
+
+@mixin H2M {
+  font-size: $H2M-text;
+  line-height: $H2M-line-height;
+}
+
+@mixin H4M {
+  font-size: $H4M-text;
+  line-height: $H4M-line-height;
+}
+
+@mixin H4M-2 {
+  font-size: $H4M-text-2;
+  line-height: $H4M-line-height-2;
+}
+
+@mixin H5M {
+  font-size: $H5M-text;
+  line-height: $H5M-line-height;
+}
+
+// Desktop + Tablet
+
+@mixin H1D {
+  font-size: $H1D-text;
+  line-height: $H1D-line-height;
+}
+
+@mixin H1D-2 {
+  font-size: $H1D-text-2;
+  line-height: $H1D-line-height-2;
+}
+
+@mixin H2D {
+  font-size: $H2D-text;
+  line-height: $H2D-line-height;
+}
+
+@mixin H3D {
+  font-size: $H3D-text;
+  line-height: $H3D-line-height;
+}
+
+@mixin H4D {
+  font-size: $H4D-text;
+  line-height: $H4D-line-height;
+}
+
+@mixin H4D-2 {
+  font-size: $H4D-text-2;
+  line-height: $H4D-line-height-2;
+}
+
+@mixin H5D {
+  font-size: $H5D-text;
+  line-height: $H5D-line-height;
+}
+
+// Breakpoints
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
