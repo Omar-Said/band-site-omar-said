@@ -627,6 +627,20 @@ body {
   margin-top: 0;
   margin-bottom: 0;
 }
+@media (min-width: 720px) {
+  .solid {
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .solid {
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
+    width: 528px;
+    margin: 0 auto;
+  }
+}
 
 .commented__container {
   margin-left: 1rem;
@@ -640,12 +654,32 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media (min-width: 720px) {
+  .commented__container {
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .commented__container {
+    width: 528px;
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+  }
+}
 
 .commented__wrapper-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 1rem;
+}
+@media (min-width: 1280px) {
+  .commented__wrapper-left:first-child {
+    margin-top: 0;
+  }
 }
 
 .commented__wrapper {
@@ -657,6 +691,17 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media (min-width: 720px) {
+  .commented__wrapper {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .commented__wrapper {
+    margin-left: 0;
+  }
+}
 
 .commented__wrapper-top {
   display: -webkit-box;
@@ -665,6 +710,11 @@ body {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+@media (min-width: 720px) {
+  .commented__wrapper-top {
+    margin-bottom: 0;
+  }
+}
 
 .commented__name {
   font-size: 0.8125rem;
@@ -672,6 +722,12 @@ body {
   font-family: "AvenirNextLTPro-Demi";
   margin-top: 0;
   margin-bottom: 0;
+}
+@media (min-width: 720px) {
+  .commented__name {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 
 .commented__date {
@@ -682,6 +738,13 @@ body {
   margin-left: auto;
   margin-top: 0;
   margin-bottom: 0;
+}
+@media (min-width: 720px) {
+  .commented__date {
+    margin-left: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 
 .commented__comment {
@@ -695,15 +758,41 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media (min-width: 720px) {
+  .commented__comment {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
+}
 
 .commented__img,
 .commented__avatar {
   margin-top: 0;
 }
+@media (min-width: 1280px) {
+  .commented__img,
+.commented__avatar {
+    margin-right: 1rem;
+  }
+}
 
 .solid-inner {
   border-top: 1px solid #e1e1e1;
   margin: 0;
+}
+@media (min-width: 720px) {
+  .solid-inner {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .solid-inner {
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
+    width: 528px;
+    margin: 0 auto;
+  }
 }
 
 .footer {

@@ -521,6 +521,16 @@ body {
   @include body-margin;
   margin-top: 0;
   margin-bottom: 0;
+
+  @include tablet {
+    @include body-margin-D;
+  }
+
+  @include desktop {
+    @include body-margin-D;
+    width: 528px;
+    margin: 0 auto;
+  }
 }
 
 .commented__container {
@@ -528,22 +538,51 @@ body {
   display: flex;
   margin-top: 1.5rem;
   flex-direction: column;
+
+  @include tablet {
+    @include body-margin-D;
+  }
+
+  @include desktop {
+    width: 528px;
+    @include body-margin-D;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+  }
 }
 
 .commented__wrapper-left {
   display: flex;
   margin-top: 1rem;
+
+  &:first-child {
+    @include desktop {
+      margin-top: 0;
+    }
+  }
 }
 
 .commented__wrapper {
   display: flex;
   flex-direction: column;
+
+  @include tablet {
+    @include body-margin;
+  }
+
+  @include desktop {
+    margin-left: 0;
+  }
 }
 
 .commented__wrapper-top {
   display: flex;
   margin-top: 0;
   margin-bottom: 1rem;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
 }
 
 .commented__name {
@@ -551,6 +590,10 @@ body {
   font-family: $font-demi;
   margin-top: 0;
   margin-bottom: 0;
+
+  @include tablet {
+    @include H4D;
+  }
 }
 
 .commented__date {
@@ -560,6 +603,11 @@ body {
   margin-left: auto;
   margin-top: 0;
   margin-bottom: 0;
+
+  @include tablet {
+    margin-left: 1rem;
+    @include H4D;
+  }
 }
 
 .commented__comment {
@@ -569,16 +617,33 @@ body {
   font-family: $font-regular;
   color: $primary;
   justify-content: center;
+
+  @include tablet {
+    @include H4D;
+  }
 }
 
 .commented__img,
 .commented__avatar {
   margin-top: 0;
+
+  @include desktop {
+    margin-right: 1rem;
+  }
 }
 
 .solid-inner {
   border-top: 1px solid $break-color;
   margin: 0;
+  @include tablet {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  @include desktop {
+    @include body-margin-D;
+    width: 528px;
+    margin: 0 auto;
+  }
 }
 
 // Footer
