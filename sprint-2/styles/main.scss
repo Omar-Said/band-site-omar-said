@@ -409,7 +409,6 @@ body {
   border-radius: 50%;
   margin-right: 1rem;
   margin-top: 1.2rem;
-
   @include desktop {
     margin-right: 1.25rem;
     height: 48px;
@@ -517,12 +516,78 @@ body {
   }
 }
 
+.solid {
+  border-top: 1px solid $break-color;
+  @include body-margin;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.commented__container {
+  @include body-margin;
+  display: flex;
+  margin-top: 1.5rem;
+  flex-direction: column;
+}
+
+.commented__wrapper-left {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.commented__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.commented__wrapper-top {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.commented__name {
+  @include H4M;
+  font-family: $font-demi;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.commented__date {
+  @include H4M;
+  font-family: $font-regular;
+  color: $text-label;
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.commented__comment {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  @include H4D;
+  font-family: $font-regular;
+  color: $primary;
+  justify-content: center;
+}
+
+.commented__img,
+.commented__avatar {
+  margin-top: 0;
+}
+
+.solid-inner {
+  border-top: 1px solid $break-color;
+  margin: 0;
+}
+
 // Footer
 
 .footer {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   background-color: $primary;
+  margin-top: 2.5rem;
 
   @include desktop {
     @include body-padding-D;
