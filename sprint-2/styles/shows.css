@@ -26,7 +26,7 @@ body {
   background-color: #323232;
   height: 5rem;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -41,7 +41,7 @@ body {
   display: block;
   margin: auto;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .header__logo {
     padding-top: 0;
     margin-left: 1.75rem;
@@ -52,7 +52,7 @@ body {
     margin-left: 6.25rem;
   }
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .header__nav {
     margin-left: 4rem;
     margin-top: 2.25rem;
@@ -77,7 +77,7 @@ body {
   font-size: 0.8125rem;
   line-height: 1.125rem;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .header__nav-ul {
     padding-top: 0;
   }
@@ -86,7 +86,7 @@ body {
   text-align: center;
   width: 50vw;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .header__nav-ul-li {
     width: 10rem;
   }
@@ -105,7 +105,7 @@ body {
   border-bottom: 4px solid #ffffff;
   padding-bottom: 0.45rem;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .header .link {
     width: 4.5rem;
     padding-bottom: 1.4rem;
@@ -125,8 +125,8 @@ body {
 }
 
 .hero {
-  background-image: url("../assets/Images/hero.jpg");
-  height: 57.2vw;
+  background-image: url("../assets/Images/cover-art.jpg");
+  height: 55.6vh;
   background-size: cover;
   background-position: center;
   display: -webkit-box;
@@ -136,20 +136,20 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   position: relative;
   z-index: 1;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .hero {
-    height: 52vw;
+    height: 78.9vh;
   }
 }
 @media (min-width: 1280px) {
   .hero {
-    height: 52.4vw;
+    height: 75vh;
   }
 }
 .hero::after {
@@ -157,40 +157,124 @@ body {
   background-color: rgba(50, 50, 50, 0.5);
   position: absolute;
   width: 100%;
-  height: 57.2vw;
+  height: 55.6vh;
   z-index: -1;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .hero::after {
-    height: 52vw;
+    height: 78.9vh;
   }
 }
 @media (min-width: 1280px) {
   .hero::after {
-    height: 52.4vw;
+    height: 75vh;
   }
 }
 .hero__heading {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
   margin: 0;
   color: #ffffff;
-  font-family: "AvenirNextLTPro-Demi";
-  margin-left: 1rem;
-  width: 12.5rem;
+  font-family: "AvenirNextLTPro-Bold";
+  margin-top: 1rem;
+  margin-bottom: 4rem;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .hero__heading {
     font-size: 3.75rem;
     line-height: 4.25rem;
-    margin-left: 1.5rem;
-    width: 75%;
+    width: 80%;
   }
 }
 @media (min-width: 1280px) {
   .hero__heading {
-    margin-left: 6.25rem;
+    width: 90%;
+    margin-bottom: 0;
+    margin-right: 4rem;
+    line-height: 5.25rem;
+  }
+}
+.hero__heading-sub {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  margin: 0;
+  color: #ffffff;
+  font-family: "AvenirNextLTPro-Bold";
+  margin-top: 4rem;
+}
+@media (min-width: 768px) {
+  .hero__heading-sub {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 6rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__heading-sub {
+    width: 60%;
+    margin-top: 10rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.test {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+@media (min-width: 768px) {
+  .test {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .test {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .left {
     width: 50%;
+    margin-left: 6.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-bottom: 1.5rem;
+    margin-right: 6.25rem;
+  }
+}
+
+.iframe {
+  width: 288px;
+  height: 100px;
+}
+@media (min-width: 768px) {
+  .iframe {
+    width: 436px;
+    height: 146px;
+  }
+}
+@media (min-width: 1280px) {
+  .iframe {
+    width: 436px;
+    height: 146px;
   }
 }
 
@@ -215,7 +299,7 @@ body {
   margin-top: 0;
   margin-bottom: 0;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .footer__header {
     visibility: visible;
     margin: 0;
@@ -223,7 +307,7 @@ body {
   }
 }
 
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .footer__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -249,7 +333,7 @@ body {
   margin-top: 1.5rem;
   margin-left: 0.25rem;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .social {
     margin: 0;
     margin-right: 9rem;
@@ -273,7 +357,7 @@ body {
 .social__icon-mod {
   padding-left: 1.5rem;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .social__icon-mod {
     margin-left: 1rem;
   }
@@ -288,7 +372,7 @@ body {
 .hidden {
   visibility: hidden;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .hidden {
     visibility: visible;
   }
@@ -310,7 +394,7 @@ body {
   color: #ffffff;
   margin-top: 0;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .contact {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -341,7 +425,7 @@ body {
   margin-top: 0;
   font-family: "AvenirNextLTPro-Regular";
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .contact__name {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -353,7 +437,7 @@ body {
   margin-top: 0;
   font-family: "AvenirNextLTPro-Regular";
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .contact__company {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -371,7 +455,7 @@ body {
   margin-bottom: 0;
   color: #afafaf;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .contact__address {
     font-size: 0.875rem;
     line-height: 1.375rem;
@@ -384,7 +468,7 @@ body {
   margin-top: 0;
   color: #afafaf;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .contact__address-mod {
     font-size: 0.875rem;
     line-height: 1.375rem;
@@ -396,7 +480,7 @@ body {
   color: #afafaf;
   font-family: "AvenirNextLTPro-Regular";
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .contact__email {
     font-size: 0.875rem;
     line-height: 1.375rem;
@@ -408,7 +492,7 @@ body {
   }
 }
 
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .mod {
     margin-right: 2.5rem;
   }
@@ -419,7 +503,7 @@ body {
   }
 }
 
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .copyright {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -435,7 +519,7 @@ body {
   margin-bottom: 0;
   margin-top: 1.5rem;
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .copyright {
     margin: 0;
     font-size: 0.875rem;
@@ -452,7 +536,7 @@ body {
   color: #afafaf;
   font-family: "AvenirNextLTPro-Regular";
 }
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .copyright-mod {
     margin-left: 0.2rem;
     font-size: 0.875rem;
