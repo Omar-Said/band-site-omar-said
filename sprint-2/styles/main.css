@@ -616,6 +616,8 @@ body {
 }
 .comment__button:hover {
   background-color: black;
+  outline: none;
+  border: none;
 }
 @media (min-width: 720px) {
   .comment__button {
@@ -628,6 +630,9 @@ body {
     width: 160px;
     height: 48px;
     margin-top: 1.5rem;
+  }
+  .comment__button:hover {
+    background-color: black;
   }
 }
 

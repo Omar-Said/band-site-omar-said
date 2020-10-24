@@ -517,6 +517,8 @@ body {
 
   &:hover {
     background-color: black;
+    outline: none;
+    border: none;
   }
 
   @include tablet {
@@ -528,6 +530,10 @@ body {
     width: 160px;
     height: 48px;
     margin-top: 1.5rem;
+
+    &:hover {
+      background-color: black;
+    }
   }
 }
 
