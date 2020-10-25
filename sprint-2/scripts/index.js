@@ -1,5 +1,3 @@
-
-
 let commentList = [
     {
     name: "Micheal Lyons",
@@ -67,8 +65,6 @@ function displayComment(comment) {
 
         let imgEl = document.createElement('img');
         imgEl.classList.add('comment__img', 'commented__avatar')
-        imgEl.setAttribute("src", "./assets/images/Mohan-muruge.jpg");
-        imgEl.setAttribute("alt", "avatar");
         emptyDiv.appendChild(imgEl);
 
         let wrapEl = document.createElement('div');
@@ -108,57 +104,3 @@ function displayComment(comment) {
 
 }
 
-// the first container after section
-
-/* <div class="commented__wrapper-left">
-<div>
-    <img src="./assets/images/Mohan-muruge.jpg" alt="avatar" class="comment__img commented__avatar">
-</div>
-<div class="commented__wrapper">
-    <div class="commented__wrapper-top">
-        <p class="commented__name">Micheal Lyons</p>
-        <p class="commented__date">12/18/2018</p>
-    </div>
-    <p class="commented__comment">They BLEW the ROOF off at their
-        last show, once everyone started
-        figuring out they were going. This is
-        still simply the greatest opening of a
-        concert I have EVER witnessed.</p>
-</div>
-</div>
-
-<hr class="solid-inner">
-
-<div class="commented__wrapper-left">
-<div>
-    <img src="./assets/images/Mohan-muruge.jpg" alt="avatar" class="comment__img commented__avatar">
-</div>
-<div class="commented__wrapper">
-    <div class="commented__wrapper-top">
-        <p class="commented__name">Gary Wong</p>
-        <p class="commented__date">12/12/2018</p>
-    </div>
-    <p class="commented__comment">Every time I see him shred I feel so motivated to get off my couch and
-        hop on my board. He’s so talented! I wish I can ride like him one day so I
-        can really enjoy myself!.</p>
-</div>
-</div>
-
-<hr class="solid-inner">
-
-<div class="commented__wrapper-left">
-<div>
-    <img src="./assets/images/Mohan-muruge.jpg" alt="avatar" class="comment__img commented__avatar">
-</div>
-<div class="commented__wrapper">
-    <div class="commented__wrapper-top">
-        <p class="commented__name">Theodore Duncan</p>
-        <p class="commented__date">11/15/2018</p>
-    </div>
-    <p class="commented__comment">How can someone be so good!!! You can tell he lives for this and loves
-        to do it every day. Everytime I see him I feel instantly happy! He’s
-        definitely my favorite ever!</p>
-</div>
-</div>
-
-<hr class="solid-inner"> */

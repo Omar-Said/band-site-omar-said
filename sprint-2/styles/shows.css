@@ -121,7 +121,28 @@ body {
 }
 
 .link-2 {
-  margin-left: 3.5rem;
+  width: 50vw;
+  border-bottom: 4px solid #ffffff;
+  padding-bottom: 0.45rem;
+}
+@media (min-width: 768px) {
+  .link-2 {
+    width: 4.5rem;
+    padding-bottom: 1.4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .link-2 {
+    width: 5rem;
+  }
+}
+.link-2 a {
+  color: #ffffff;
+}
+@media (min-width: 1280px) {
+  .link-2 {
+    margin-left: 3.5rem;
+  }
 }
 
 .hero {
@@ -149,7 +170,7 @@ body {
 }
 @media (min-width: 1280px) {
   .hero {
-    height: 75vh;
+    height: 78.9vh;
   }
 }
 .hero::after {
@@ -167,7 +188,7 @@ body {
 }
 @media (min-width: 1280px) {
   .hero::after {
-    height: 75vh;
+    height: 78.9vh;
   }
 }
 .hero__heading {
@@ -217,18 +238,18 @@ body {
   }
 }
 
-.test {
+.hero__container {
   margin-left: 1rem;
   margin-right: 1rem;
 }
 @media (min-width: 768px) {
-  .test {
+  .hero__container {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
   }
 }
 @media (min-width: 1280px) {
-  .test {
+  .hero__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -236,16 +257,14 @@ body {
     margin-right: 0;
   }
 }
-
 @media (min-width: 1280px) {
-  .left {
+  .hero__container-left {
     width: 50%;
     margin-left: 6.25rem;
   }
 }
-
 @media (min-width: 1280px) {
-  .right {
+  .hero__container-right {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -276,6 +295,113 @@ body {
     width: 436px;
     height: 146px;
   }
+}
+
+.shows {
+  font-family: "AvenirNextLTPro-Bold";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 2rem 1rem 2.5rem 1rem;
+}
+@media (min-width: 768px) {
+  .shows {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+.shows__container {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+@media (min-width: 768px) {
+  .shows__container {
+    display: none;
+  }
+}
+.shows__container-header {
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-family: "AvenirNextLTPro-Regular";
+  color: #afafaf;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.shows__container-info {
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  font-family: "AvenirNextLTPro-Regular";
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.shows__container-info:nth-child(2) {
+  font-family: "AvenirNextLTPro-Demi";
+}
+.shows__container-info:nth-child(6) {
+  margin-bottom: 0;
+}
+.shows__container-button {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  width: 18rem;
+  height: 3.125rem;
+  background-color: #323232;
+  color: #ffffff;
+  font-family: "AvenirNextLTPro-Regular";
+  font-weight: bold;
+  border-radius: 4px;
+  border: none;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+}
+.shows__container-button:hover {
+  background-color: black;
+  outline: none;
+  border: none;
+}
+@media (min-width: 1280px) {
+  .shows__container-button {
+    width: 160px;
+    height: 48px;
+    margin-top: 1.5rem;
+  }
+  .shows__container-button:hover {
+    background-color: black;
+  }
+}
+
+.shows__container-br {
+  border-top: 1px solid #e1e1e1;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .showsT {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .showsT__container-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 70%;
+  }
+}
+.showsT__container-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .footer {
