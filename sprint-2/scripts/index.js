@@ -63,7 +63,7 @@ function displayComment(comment) {
         let emptyDiv = document.createElement('div');
         divEl.appendChild(emptyDiv);
 
-        let imgEl = document.createElement('img');
+        let imgEl = document.createElement('div');
         imgEl.classList.add('comment__img', 'commented__avatar')
         emptyDiv.appendChild(imgEl);
 

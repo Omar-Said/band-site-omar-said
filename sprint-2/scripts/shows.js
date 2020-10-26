@@ -46,11 +46,9 @@ let showList = [{
     locHeader: 'LOCATION',
     location: "San Fancisco, CA"
 },
-];
+]
 
 window.addEventListener('load', publishShows(showList));
-
-
 
 function publishShows(showList) {
     let showEl = document.querySelector('.shows__container');
@@ -59,7 +57,6 @@ function publishShows(showList) {
 
     for (let i = 0; i < showList.length; i++) {
         displayShows(showList[i]);
-
     }
 }
 
@@ -100,10 +97,6 @@ function displayShows(shows){
     submit.setAttribute('value', 'BUY TICKETS')
     divEl.appendChild(submit);
 
-    let br = document.createElement('hr');
-    br.classList.add('shows__container-br');
-    divEl.appendChild(br);
-
     dateEL.innerText = shows.dateHeader;
     date.innerText = shows.date;
 
@@ -116,3 +109,15 @@ function displayShows(shows){
     showEl.appendChild(divEl);
 
 };
+
+
+
+//  For future use
+
+// let iframe = document.querySelector('.hero__container-right');
+
+// let baby = document.createElement('iframe');
+// baby.setAttribute('src', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/893127532&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true');
+// baby.classList.add('iframe');
+
+// iframe.appendChild(baby);

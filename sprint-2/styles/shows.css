@@ -141,7 +141,7 @@ body {
 }
 @media (min-width: 1280px) {
   .link-2 {
-    margin-left: 3.5rem;
+    margin-left: 5.5rem;
   }
 }
 
@@ -297,27 +297,98 @@ body {
   }
 }
 
-.shows {
-  font-family: "AvenirNextLTPro-Bold";
-  font-size: 1.5rem;
-  line-height: 2rem;
-  margin: 2rem 1rem 2.5rem 1rem;
-}
-@media (min-width: 768px) {
-  .shows {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-.shows__container {
+.main {
   margin-left: 1rem;
   margin-right: 1rem;
 }
 @media (min-width: 768px) {
-  .shows__container {
-    display: none;
+  .main {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .main {
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section__shows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 1280px) {
+  .shows-wrapper {
+    margin-top: 3rem;
+  }
+}
+
+.section__headers {
+  display: none;
+}
+@media (min-width: 768px) {
+  .section__headers {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 768px) {
+  .headings {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-family: "AvenirNextLTPro-Regular";
+    color: #afafaf;
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 0;
+  }
+}
+@media (min-width: 768px) {
+  .headings-mod {
+    width: 24vw;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .headings-mod {
+    width: 16.8vw;
+  }
+}
+
+.shows {
+  font-family: "AvenirNextLTPro-Bold";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 768px) {
+  .shows {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin-top: 3rem;
   }
 }
 .shows__container-header {
@@ -329,6 +400,11 @@ body {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+@media (min-width: 768px) {
+  .shows__container-header {
+    display: none;
+  }
+}
 .shows__container-info {
   font-size: 0.8125rem;
   line-height: 1.125rem;
@@ -339,13 +415,23 @@ body {
 .shows__container-info:nth-child(2) {
   font-family: "AvenirNextLTPro-Demi";
 }
-.shows__container-info:nth-child(6) {
-  margin-bottom: 0;
+@media (min-width: 768px) {
+  .shows__container-info {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    display: inline-block;
+    width: 24vw;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__container-info {
+    width: 16.8vw;
+  }
 }
 .shows__container-button {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  width: 18rem;
+  width: 100%;
   height: 3.125rem;
   background-color: #323232;
   color: #ffffff;
@@ -361,6 +447,12 @@ body {
   outline: none;
   border: none;
 }
+@media (min-width: 768px) {
+  .shows__container-button {
+    width: 10rem;
+    margin: 0;
+  }
+}
 @media (min-width: 1280px) {
   .shows__container-button {
     width: 160px;
@@ -372,36 +464,17 @@ body {
   }
 }
 
-.shows__container-br {
-  border-top: 1px solid #e1e1e1;
-  margin-top: 0;
-  margin-bottom: 0;
+@media (min-width: 768px) {
+  .shows__container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
 }
 
-@media (min-width: 768px) {
-  .showsT {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
-}
-@media (min-width: 768px) {
-  .showsT__container-left {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 70%;
-  }
-}
-.showsT__container-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.shows__container-wrapper {
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .footer {

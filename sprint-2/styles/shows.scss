@@ -121,7 +121,7 @@ body {
     color: #ffffff;
   }
   @include desktop {
-    margin-left: 3.5rem;
+    margin-left: 5.5rem;
   }
 }
 
@@ -239,6 +239,7 @@ body {
 .iframe {
   width: 288px;
   height: 100px;
+
   @include tablet {
     width: 436px;
     height: 146px;
@@ -250,25 +251,80 @@ body {
   }
 }
 
-// Shows Container for Mobile Only
+// Shows Container
+
+.main {
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  @include tablet {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  @include desktop {
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
+  }
+}
+
+.section__shows {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.shows-wrapper {
+  @include desktop {
+    margin-top: 3rem;
+  }
+}
+
+.section__headers {
+  display: none;
+  @include tablet {
+    display: inline-block;
+  }
+}
+
+.headings {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    font-family: $font-regular;
+    color: $text-label;
+    font-weight: bold;
+    margin-top: 1rem;
+    @include H3D;
+    margin-top: 0;
+  }
+
+  &-mod {
+    @include tablet {
+      width: 24vw;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    @include desktop {
+      width: 16.8vw;
+    }
+  }
+}
 
 .shows {
   font-family: $font-bold;
   @include H1M;
-  margin: 2rem 1rem 2.5rem 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
 
   @include tablet {
-    @include body-margin-T;
     @include H2D;
   }
 
-  &__container {
-    margin-left: 1rem;
-    margin-right: 1rem;
-
-    @include tablet {
-      display: none;
-    }
+  @include desktop {
+    @include H1D-2;
+    margin-top: 3rem;
   }
 
   &__container-header {
@@ -278,6 +334,10 @@ body {
     font-weight: bold;
     margin-top: 1rem;
     margin-bottom: 1rem;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__container-info {
@@ -290,15 +350,21 @@ body {
       font-family: $font-demi;
     }
 
-    &:nth-child(6) {
-      margin-bottom: 0;
+    @include tablet {
+      @include H3D;
+      display: inline-block;
+      width: 24vw;
+    }
+
+    @include desktop {
+      width: 16.8vw;
     }
   }
 
   &__container-button {
     margin-top: 2rem;
     margin-bottom: 1rem;
-    width: 18rem;
+    width: 100%;
     height: 3.125rem;
     background-color: $primary;
     color: #ffffff;
@@ -314,6 +380,11 @@ body {
       border: none;
     }
 
+    @include tablet {
+      width: 10rem;
+      margin: 0;
+    }
+
     @include desktop {
       width: 160px;
       height: 48px;
@@ -326,34 +397,20 @@ body {
   }
 }
 
-.shows__container-br {
-  border-top: 1px solid $break-color;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.showsT {
+.shows__container {
   @include tablet {
-    @include body-margin-T;
-  }
-
-  &__container-left {
-    @include tablet {
-      display: flex;
-      justify-content: space-between;
-      width: 70%;
-    }
-  }
-
-  &__container-right {
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
   }
 }
 
-//  Shows Container for Tablet + Desktop Only
+.shows__container-wrapper {
+  border-bottom: 1px solid $break-color;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+}
 
-// Footer
+// Footer Start
 
 .footer {
   padding-left: 1.5rem;
@@ -575,50 +632,3 @@ body {
     @include H4D;
   }
 }
-
-// .hero__container {
-//     margin-left: 1rem;
-//     margin-right: 1rem;
-
-//     @include tablet {
-//       margin-left: 1.5rem;
-//       margin-right: 1.5rem;
-//     }
-
-//     @include desktop {
-//       display: flex;
-//       margin-left: 0;
-//       margin-right: 0;
-//     }
-//   }
-
-//   .hero__container-left {
-//     @include desktop {
-//       width: 50%;
-//       margin-left: 6.25rem;
-//     }
-//   }
-
-//   .hero__container-right {
-//     @include desktop {
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: flex-end;
-//       padding-bottom: 1.5rem;
-//       margin-right: 6.25rem;
-//     }
-//   }
-
-// .iframe {
-//     width: 288px;
-//     height: 100px;
-//     @include tablet {
-//       width: 436px;
-//       height: 146px;
-//     }
-
-//     @include desktop {
-//       width: 436px;
-//       height: 146px;
-//     }
-//   }
