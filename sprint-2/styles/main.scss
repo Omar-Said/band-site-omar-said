@@ -368,6 +368,7 @@ body {
 
 .comment {
   @include body-margin;
+
   @include tablet {
     @include body-margin-T;
   }
@@ -403,6 +404,13 @@ body {
 .form {
   display: flex;
   flex-direction: column;
+}
+
+.test {
+  border-bottom: 1px solid $break-color;
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .comment__img {
@@ -575,6 +583,7 @@ body {
 .commented__wrapper-left {
   display: flex;
   margin-top: 1rem;
+  border-bottom: 1px solid $break-color;
 
   &:first-child {
     @include desktop {
@@ -654,7 +663,8 @@ body {
   margin-top: 1.2rem;
   background-color: #e1e1e1;
   outline: none;
-  outline: none;
+  background-color: #e1e1e1;
+
   margin-top: 0;
 
   @include desktop {
@@ -672,7 +682,8 @@ body {
   @include desktop {
     @include body-margin-D;
     width: 528px;
-    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
 

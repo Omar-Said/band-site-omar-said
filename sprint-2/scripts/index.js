@@ -64,7 +64,7 @@ function displayComment(comment) {
         divEl.appendChild(emptyDiv);
 
         let imgEl = document.createElement('div');
-        imgEl.classList.add('comment__img', 'commented__avatar')
+        imgEl.classList.add('commented__img', 'commented__avatar')
         emptyDiv.appendChild(imgEl);
 
         let wrapEl = document.createElement('div');
@@ -90,11 +90,6 @@ function displayComment(comment) {
         let commentEl = document.createElement('p');
         commentEl.classList.add('commented__comment');
         wrapEl.appendChild(commentEl);
-
-        let LineBr = document.createElement("hr");
-        LineBr.classList.add("solid-inner")
-        commentContainer.appendChild(LineBr);
-
 
         nameEL.innerText = comment.name;
         commentEl.innerText = comment.comment;
