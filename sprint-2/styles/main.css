@@ -495,7 +495,6 @@ body {
 }
 
 .test {
-  border-bottom: 1px solid #e1e1e1;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -708,10 +707,10 @@ body {
   margin-top: 1rem;
   border-bottom: 1px solid #e1e1e1;
 }
-@media (min-width: 1280px) {
-  .commented__wrapper-left:first-child {
-    margin-top: 0;
-  }
+.commented__wrapper-left:first-child {
+  margin-top: 0;
+  border-top: 1px solid #e1e1e1;
+  padding-top: 1rem;
 }
 
 .commented__wrapper {

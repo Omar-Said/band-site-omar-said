@@ -85,8 +85,6 @@ body {
 
   .link {
     width: 50vw;
-    border-bottom: 4px solid #ffffff;
-    padding-bottom: 0.45rem;
 
     @include tablet {
       width: 4.5rem;
@@ -104,24 +102,22 @@ body {
 }
 
 .link-2 {
-  width: 50vw;
+  // width: 50vw;
   border-bottom: 4px solid #ffffff;
   padding-bottom: 0.45rem;
 
   @include tablet {
     width: 4.5rem;
     padding-bottom: 1.4rem;
+    margin-left: 2.8rem;
   }
 
   @include desktop {
-    width: 5rem;
+    margin-left: 2.5rem;
   }
 
   & a {
     color: #ffffff;
-  }
-  @include desktop {
-    margin-left: 5.5rem;
   }
 }
 
@@ -292,7 +288,7 @@ body {
   @include tablet {
     display: flex;
     flex-direction: row;
-    font-family: $font-regular;
+    font-family: $font-demi;
     color: $text-label;
     font-weight: bold;
     margin-top: 1rem;
@@ -329,9 +325,8 @@ body {
 
   &__container-header {
     @include H5M;
-    font-family: $font-regular;
+    font-family: $font-demi;
     color: $text-label;
-    font-weight: bold;
     margin-top: 1rem;
     margin-bottom: 1rem;
 

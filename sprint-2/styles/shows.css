@@ -102,8 +102,6 @@ body {
 }
 .header .link {
   width: 50vw;
-  border-bottom: 4px solid #ffffff;
-  padding-bottom: 0.45rem;
 }
 @media (min-width: 768px) {
   .header .link {
@@ -121,7 +119,6 @@ body {
 }
 
 .link-2 {
-  width: 50vw;
   border-bottom: 4px solid #ffffff;
   padding-bottom: 0.45rem;
 }
@@ -129,20 +126,16 @@ body {
   .link-2 {
     width: 4.5rem;
     padding-bottom: 1.4rem;
+    margin-left: 2.8rem;
   }
 }
 @media (min-width: 1280px) {
   .link-2 {
-    width: 5rem;
+    margin-left: 2.5rem;
   }
 }
 .link-2 a {
   color: #ffffff;
-}
-@media (min-width: 1280px) {
-  .link-2 {
-    margin-left: 5.5rem;
-  }
 }
 
 .hero {
@@ -349,7 +342,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    font-family: "AvenirNextLTPro-Regular";
+    font-family: "AvenirNextLTPro-Demi";
     color: #afafaf;
     font-weight: bold;
     margin-top: 1rem;
@@ -394,9 +387,8 @@ body {
 .shows__container-header {
   font-size: 0.75rem;
   line-height: 1.25rem;
-  font-family: "AvenirNextLTPro-Regular";
+  font-family: "AvenirNextLTPro-Demi";
   color: #afafaf;
-  font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }

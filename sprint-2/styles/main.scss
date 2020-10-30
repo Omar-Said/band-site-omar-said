@@ -407,7 +407,7 @@ body {
 }
 
 .test {
-  border-bottom: 1px solid $break-color;
+  // border-bottom: 1px solid $break-color;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -586,9 +586,9 @@ body {
   border-bottom: 1px solid $break-color;
 
   &:first-child {
-    @include desktop {
-      margin-top: 0;
-    }
+    margin-top: 0;
+    border-top: 1px solid $break-color;
+    padding-top: 1rem;
   }
 }
 
