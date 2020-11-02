@@ -12,16 +12,6 @@
   margin-right: 1.5rem;
 }
 
-@mixin body-padding {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@mixin body-margin-D {
-  margin-left: 6.25rem;
-  margin-right: 6.25rem;
-}
-
 @mixin body-padding-D {
   padding-left: 6.25rem;
   padding-right: 6.25rem;
@@ -93,6 +83,12 @@
 }
 
 // Breakpoints
+
+@mixin mobileToTablet {
+  @media (min-width: 520px) {
+    @content;
+  }
+}
 
 @mixin tablet {
   @media (min-width: $tablet) {

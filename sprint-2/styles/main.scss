@@ -80,6 +80,7 @@ body {
       width: 0;
     }
   }
+
   & a {
     text-decoration: none;
     color: $text-label;
@@ -153,7 +154,7 @@ body {
     @include H1M;
     margin: 0;
     color: #ffffff;
-    font-family: $font-demi;
+    font-family: "Avenir ";
     margin-left: 1rem;
     width: 12.5rem;
 
@@ -173,22 +174,24 @@ body {
 // Main Quote and Article section
 
 .main {
-  @include body-margin;
   margin-bottom: 2.5rem;
+
+  @include desktop {
+    margin-bottom: 3rem;
+  }
+}
+
+.section {
+  @include body-margin;
 
   @include tablet {
     @include body-margin-T;
   }
 
   @include desktop {
-    @include body-margin-D;
-    margin-bottom: 3rem;
+    max-width: 1080px;
+    margin: 0 auto;
   }
-}
-
-.section {
-  display: flex;
-  flex-direction: column;
 
   &__header {
     @include H1M;
@@ -211,13 +214,16 @@ body {
     width: 100%;
 
     @include tablet {
+      object-fit: cover;
       height: 47.2vw;
     }
 
     @include desktop {
-      margin: 0 auto;
+      margin: auto;
       height: 53vh;
       width: 70vw;
+      display: block;
+      max-width: 896px;
     }
   }
 
@@ -232,8 +238,8 @@ body {
 
     @include desktop {
       margin-top: 3rem;
-      padding-right: 5.5rem;
       padding-left: 5.5rem;
+      max-width: 896px;
     }
   }
 
@@ -251,11 +257,25 @@ body {
       margin-bottom: 2.25rem;
       padding-right: 5.5rem;
       padding-left: 5.5rem;
+      max-width: 896px;
     }
   }
 }
 
 // Articles section
+
+.articles {
+  @include body-margin;
+
+  @include tablet {
+    @include body-margin-T;
+  }
+
+  @include desktop {
+    max-width: 896px;
+    margin: 0 auto;
+  }
+}
 
 .articles__container {
   @include tablet {
@@ -263,8 +283,8 @@ body {
   }
 
   @include desktop {
-    padding-right: 5.5rem;
-    padding-left: 5.5rem;
+    max-width: 896px;
+    margin: 0 auto;
   }
 }
 
@@ -279,9 +299,9 @@ body {
   }
 
   @include desktop {
+    max-width: 896px;
+    margin: 0 auto;
     margin-bottom: 2rem;
-    padding-right: 5.5rem;
-    padding-left: 5.5rem;
   }
 }
 
@@ -311,38 +331,25 @@ body {
 
 // Gallery
 
-.gallery__heading {
-  font-family: $font-bold;
-  @include H1M;
-  @include body-padding;
-  padding-top: 2rem;
-  padding-bottom: 1.5rem;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: $BG-fill;
-
-  @include tablet {
-    @include H1D-2;
-  }
-
-  @include desktop {
-    @include body-padding-D;
-    padding-top: 3rem;
-    padding-bottom: 4rem;
-  }
-}
-
 .gallery {
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include body-padding;
   background-color: $BG-fill;
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-bottom: 2rem;
+
+  @include mobileToTablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: none;
   }
 
   @include desktop {
@@ -350,9 +357,39 @@ body {
     padding-bottom: 1rem;
   }
 
+  &__heading {
+    font-family: $font-bold;
+    @include H1M;
+    padding: 2rem 1rem 1.5rem 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: $BG-fill;
+
+    @include tablet {
+      @include H1D-2;
+    }
+
+    @include desktop {
+      @include body-padding-D;
+      padding-top: 3rem;
+      padding-bottom: 4rem;
+    }
+  }
+
   &__images {
     width: 100%;
     margin-bottom: 1rem;
+
+    @include mobileToTablet {
+      width: calc(50% - (#{0.5rem} * 2 / 2));
+      margin: 0 $images-margin-tablet $images-margin-tablet 0;
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+      &:nth-child(odd) {
+        margin-right: 0;
+      }
+    }
 
     @include tablet {
       width: calc(33.33% - (#{$images-margin-tablet} * 2 / 3));
@@ -390,13 +427,21 @@ body {
     @include desktop {
       @include H1D-2;
       @include body-padding-D;
+      margin: 0 auto;
       margin-top: 3rem;
       margin-bottom: 3.5rem;
+      max-width: 1280px;
     }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
   }
 }
 
-.comment__container {
+.comment__form {
+  margin: auto;
   display: flex;
   justify-content: center;
 }
@@ -404,13 +449,6 @@ body {
 .form {
   display: flex;
   flex-direction: column;
-}
-
-.test {
-  // border-bottom: 1px solid $break-color;
-  margin: auto;
-  display: flex;
-  justify-content: center;
 }
 
 .comment__img {
@@ -545,23 +583,6 @@ body {
   }
 }
 
-.solid {
-  border-top: 1px solid $break-color;
-  @include body-margin;
-  margin-top: 0;
-  margin-bottom: 0;
-
-  @include tablet {
-    @include body-margin-D;
-  }
-
-  @include desktop {
-    @include body-margin-D;
-    width: 528px;
-    margin: 0 auto;
-  }
-}
-
 .commented__container {
   @include body-margin;
   display: flex;
@@ -569,12 +590,12 @@ body {
   flex-direction: column;
 
   @include tablet {
-    @include body-margin-D;
+    margin-left: 6.25rem;
+    margin-right: 6.25rem;
   }
 
   @include desktop {
     width: 528px;
-    @include body-margin-D;
     margin: 0 auto;
     margin-top: 1.5rem;
   }
@@ -664,26 +685,10 @@ body {
   background-color: #e1e1e1;
   outline: none;
   background-color: #e1e1e1;
-
   margin-top: 0;
 
   @include desktop {
     margin-right: 1rem;
-  }
-}
-
-.solid-inner {
-  border-top: 1px solid $break-color;
-  margin: 0;
-  @include tablet {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  @include desktop {
-    @include body-margin-D;
-    width: 528px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
   }
 }
 
@@ -762,24 +767,24 @@ body {
       margin-left: 2rem;
     }
   }
-}
 
-.hidden {
-  visibility: hidden;
-
-  @include tablet {
-    visibility: visible;
+  &__logo-anchor {
+    @include desktop {
+      margin-left: auto;
+    }
   }
 
-  @include desktop {
-    height: 1.5rem;
-    width: 7.5rem;
-  }
-}
+  &__logo-hide {
+    visibility: hidden;
 
-.logo-anchor {
-  @include desktop {
-    margin-left: auto;
+    @include tablet {
+      visibility: visible;
+    }
+
+    @include desktop {
+      height: 1.5rem;
+      width: 7.5rem;
+    }
   }
 }
 
@@ -803,6 +808,15 @@ body {
   &__wrapper {
     @include desktop {
       margin-right: 4rem;
+    }
+  }
+
+  &__wrapper-mod {
+    @include tablet {
+      margin-right: 2.5rem;
+    }
+    @include desktop {
+      margin-right: 5rem;
     }
   }
 
@@ -842,17 +856,6 @@ body {
     }
   }
 
-  &__address-mod {
-    @include H5M;
-    font-family: $font-regular;
-    margin-top: 0;
-    color: $text-label;
-
-    @include tablet {
-      @include H4D;
-    }
-  }
-
   &__email {
     @include H5M;
     color: $text-label;
@@ -868,22 +871,13 @@ body {
   }
 }
 
-.mod {
-  @include tablet {
-    margin-right: 2.5rem;
-  }
-  @include desktop {
-    margin-right: 5rem;
-  }
-}
-
-.copyright {
+.footer__copyright {
   @include tablet {
     display: flex;
   }
 }
 
-.copyright {
+.footer__copyright-left {
   @include H5M;
   color: $text-label;
   font-family: $font-regular;
@@ -896,7 +890,7 @@ body {
   }
 }
 
-.copyright-mod {
+.footer__copyright-right {
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 2rem;
